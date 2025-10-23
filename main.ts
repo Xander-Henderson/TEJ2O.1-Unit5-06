@@ -15,9 +15,14 @@ basic.showIcon(IconNames.Happy)
 input.onButtonPressed(Button.A, function() {
 // gets distance to object in cm
     basic.clearScreen()
-    distanceToObjest = sonar.ping(DigitalPin.P0, DigitalPin.P0, PingUnit.Centimeters)
+    distanceToObjest = sonar.ping(
+        DigitalPin.P1,
+        DigitalPin.P2,
+        PingUnit.Centimeters
+        )
 
 // shows the distance to object
+    basic.clearScreen()
     basic.showNumber(distanceToObjest)
     basic.showIcon(IconNames.Happy)
 })
